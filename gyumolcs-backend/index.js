@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { db } from "./db.js";
+import {db} from "./db.js";
 
 import gyumolcsRoutes from "./routes/gyumolcsRoutes.js";
 import arrivalRoutes from "./routes/arrivalRoutes.js";
