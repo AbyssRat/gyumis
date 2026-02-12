@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/gyumolcs"; // backend route
+const API_URL = "http://localhost:5000/gyumolcs"; // pontosan így!
+
 
 // Alapértelmezett axios config (minden hívásnál használja)
 const api = axios.create({
