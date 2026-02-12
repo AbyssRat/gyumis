@@ -12,8 +12,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// GET /fruits – Az összes gyümölcs lekérdezése. 
+// GET /fruits/:id – Egy adott gyümölcs lekérdezése ID alapján. 
+// POST /fruits – Új gyümölcs hozzáadása. 
+// PUT /fruits/:id – Egy meglévő gyümölcs adatainak frissítése. 
+// DELETE /fruits/:id – Egy gyümölcs törlése. 
+
 app.use("/api/fruit", fruitRoutes);
 app.use("/api/arrivals", arrivalsRoutes);
+
 
 const PORT = process.env.PORT || 3000;
 
