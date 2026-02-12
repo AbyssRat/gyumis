@@ -5,7 +5,7 @@ import {
   createGyumolcs,
   updateGyumolcs,
   deleteGyumolcs
-} from "../controllers/gyumolcsController.js";
+} from "../controllers/fruitController.js";
  
 const router = express.Router();
  

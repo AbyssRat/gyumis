@@ -18,8 +18,9 @@ app.use(express.json());
 // PUT /fruits/:id – Egy meglévő gyümölcs adatainak frissítése. 
 // DELETE /fruits/:id – Egy gyümölcs törlése. 
 
-app.use("/api/fruit", fruitRoutes);
-app.use("/api/arrivals", arrivalsRoutes);
+app.use("/fruits", fruitRoutes);
+app.use("/arrivals", arrivalsRoutes);
+
 
 
 const PORT = process.env.PORT || 3000;
