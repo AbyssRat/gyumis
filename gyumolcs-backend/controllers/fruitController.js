@@ -1,8 +1,18 @@
 import { db } from "../config/db.js";
  
+// export const getGyumolcsok = async (req, res) => {
+//   const [rows] = await db.query("SELECT * FROM gyumolcs");
+//   res.json(rows);
+// };
+
 export const getGyumolcsok = async (req, res) => {
-  const [rows] = await db.query("SELECT * FROM gyumolcs");
-  res.json(rows);
+  try {
+    const [rows] = await db.query("SELECT * FROM gyumolcs");
+    res.json(rows);
+  } catch (error) {
+    console.error("DB ERROR:", error);
+    res.status(500).json({ error: error.message });
+  }
 };
  
 export const getGyumolcsById = async (req, res) => {
