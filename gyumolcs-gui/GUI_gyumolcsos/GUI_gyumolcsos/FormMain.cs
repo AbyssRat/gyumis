@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace GUI_gyumolcsos
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        public Form1()
+
+        BindingList<Gyumolcs> gyumolcsok = new BindingList<Gyumolcs>();
+        api_service api = new api_service();
+        public FormMain()
         {
             InitializeComponent();
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
+            List<Gyumolcs> gyumolcsokList = api.get_gyumolcsok().Result;
         }
     }
 }
