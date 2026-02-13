@@ -34,7 +34,6 @@ namespace GUI_gyumolcsos
 
         [JsonProperty("src")]
         public string Src { get; set; }
-
     }
 
     public partial class Gyumolcs
